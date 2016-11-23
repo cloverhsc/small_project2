@@ -1,0 +1,47 @@
+.location-section {
+    color:#D1DBBD;
+    background: #193441;
+    height:10%;
+    display: flex;
+    align-content: center;
+}
+
+.location {
+    font-size: 1.5em;
+    background-color: #193441;
+    display: flex;
+    align-content: center;
+    border-right: 2px solid #FCFFF5;
+}
+
+.location p {
+    margin: auto;
+}
+
+.location-info {
+    font-size: 1em;
+    display: flex;
+    align-content: center;
+}
+
+.location-info p {
+    margin: auto;
+}
+
+/*  Registed Nurses */
+.reg-nurses {
+    background: #193441;
+    height:70%;
+    border-top: 2px ;
+    border-bottom: 2px ;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: #FCFFF5;
+    border-style: solid;
+}
+
+/* Weather and Time */
+.weather-time {
+    background: #193441;
+    height: 20%;
+}

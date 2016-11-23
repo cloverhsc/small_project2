@@ -10,7 +10,7 @@ import {
 export class DashboardComponent implements OnInit, OnDestroy {
 
   constructor() {
-      window.onbeforeunload = () => 'Close dashboard page.';
+    //   window.onbeforeunload = () => 'Close dashboard page.';
   }
 
   ngOnInit() {
@@ -21,7 +21,4 @@ export class DashboardComponent implements OnInit, OnDestroy {
       alert('leave dashboard page.');
   }
 
-  // @HostListener('window:onbeforeunload', ['$event']) onBeforeUnload (event) {
-  //      return 'bye';
-  // }
 }

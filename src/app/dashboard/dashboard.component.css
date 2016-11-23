@@ -1,0 +1,73 @@
+@charset 'utf-8';
+/* dashboard */
+.dashboard {
+    width: 100vw;
+    height: 100vh;
+    min-width: 800px;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.black-border {
+    border: 2px solid #000;
+}
+
+.yellow-border{
+    border:2px solid #ffe500;
+}
+
+.blue-border{
+    border: 2px solid #69a0d6;
+}
+
+/**************************/
+.nav {
+    /*width:100vw;*/
+    height: 5vh;
+    min-height: 42px;
+    max-height: 42px;
+    padding-right: 0px;     /* clean bootstrap padding right */
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 2px;
+    border-color: #FCFFF5;
+    border-style: solid;
+}
+
+/**************************/
+.sider-bar {
+    /*width: 25%;*/
+    /*max-width: 25%;*/
+    position: relative;
+    left: 0px;
+    height: 95vh;
+    padding-right: 0px;     /* clean bootstrap padding right */
+    padding-left: 0px;
+
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 0px;
+    border-color: #FCFFF5;
+    border-style: solid;
+}
+
+/**************************/
+.slide {
+    position: relative;
+    /*width:75%;
+    max-width: 75%;*/
+    height: 95vh;
+    padding-right: 0px;     /* clean bootstrap padding right */
+    padding-left: 0px;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 0px;
+    border-color: #FCFFF5;
+    border-style: solid;
+}

@@ -7,12 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
+import { SlideComponent } from './dashboard/slide/slide.component';
+import { NavigatorComponent } from './dashboard/navigator/navigator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent,
+    SlideComponent,
+    NavigatorComponent
   ],
   imports: [
     BrowserModule,

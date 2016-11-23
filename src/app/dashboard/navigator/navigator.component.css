@@ -1,0 +1,37 @@
+.brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #D1DBBD;
+    background-color: #193441;
+    border-top-left-radius: 5px;
+    border-right: 2px solid #3E606F;
+    height:100%;
+}
+.center {
+    position: relative;
+    background-color: #193441;
+    height: 100%;
+}
+.manage {
+    border-top-right-radius: 5px;
+    font-size: 1.5em;
+    color: #D1DBBD;
+    background-color: #193441;
+    float: right;
+    border-left: 2px solid #3E606F;
+    height:100%;
+}
+
+.manage-link {
+
+}
+
+.manage-link a {
+    color: #D1DBBD;
+    display: block;
+}
+
+.manage-link a:hover {
+    color: #FCFFF5;
+    text-decoration: none;
+}
