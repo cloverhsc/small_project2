@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { SlideComponent } from './dashboard/slide/slide.component';
 import { NavigatorComponent } from './dashboard/navigator/navigator.component';
+import { PhysiologicalComponent } from './dashboard/physiological/physiological.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavigatorComponent } from './dashboard/navigator/navigator.component';
     HomeComponent,
     SidebarComponent,
     SlideComponent,
-    NavigatorComponent
+    NavigatorComponent,
+    PhysiologicalComponent
   ],
   imports: [
     BrowserModule,
