@@ -1,5 +1,21 @@
 .physiological-section {
-    background-color: #3E606F;
+    background-color: #D1DBBD;
     border-radius: 5px;
     height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left:0px;
+    padding-right: 0px;
+}
+
+.customer-physiological-card {
+    position: relative;
+    margin: 5px;
+    background-color: #3E606F;
+    border-radius: 5px;
+    width: 30%;
+    height: calc(50% - 10px);
+    padding-left:0px;
+    padding-right: 0px;
 }
