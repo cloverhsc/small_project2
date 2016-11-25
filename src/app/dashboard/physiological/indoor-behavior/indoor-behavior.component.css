@@ -1,0 +1,103 @@
+.indoor-behavior-area {
+    position: relative;
+    height: 15%;
+    font-size: 1em;
+    color: #D1DBBD;
+    padding: 5px 0px;
+    border-bottom: 1px solid #FCFFF5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* leave and calling area style */
+.leave-info-area,
+.call-info-area{
+    position: relative;
+    height: 100%;
+}
+.is-leave-area,
+.is-calling-area {
+    position: relative;
+    height: 100%;
+    display: flex;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+
+.is-leave,
+.is-calling {
+    margin: auto;
+    font-size: 1.5em;
+}
+
+/* Leave alert style */
+.leave-true {
+    background-color: #D7941E;
+}
+
+.leave-false {
+    background-color: #2DA43E;
+}
+
+/* Calling alert style */
+.calling-true {
+    animation-name: alert;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes alert{
+    0% {
+        background-color: #D12C20;
+        color: #FFF;
+    }
+    25% {
+        color: #3E606F;
+        background-color: #FFF;
+    }
+    50% {
+        background-color: #D12C20;
+        color: #FFF;
+    }
+    75% {
+        color: #3E606F;
+        background-color: #FFF;
+    }
+    100% {
+        background-color: #D12C20;
+        color: #FFF;
+    }
+}
+
+.calling-false {
+    color: #3E606F;
+    background-color: #FFF;
+}
+
+/* Leave and calling count area style */
+.leave-count-area,
+.call-count-area {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+
+.leave-count-title,
+.call-count-title {
+    width: 100%;
+    height: 50%;
+    font-size: 1.1em;
+    border-bottom: 1px solid #193441;
+    margin: 0px 0px 5px 0px;
+}
+
+.leave-count,
+.call-count {
+    font-size: 1.1em;
+    margin: auto;
+}
