@@ -1,0 +1,12 @@
+.customer-physinfo-area {
+    font-size: 1em;
+    color: #D1DBBD;
+    height:40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.physinfo {
+    padding:0px;
+}

@@ -1,0 +1,39 @@
+.devices-info-area {
+    position: relative;
+    height: 15%;
+    font-size: 1em;
+    color: #D1DBBD;
+    padding: 5px 0px;
+    border-bottom: 1px solid #FCFFF5;
+    display: flex;
+    justify-content: center;;
+    align-items: center;
+}
+
+/* wristband area style */
+.wristband-info-area{
+    position: relative;
+    height: 100%;
+}
+
+.is-wristband-onpower {
+    position: relative;
+    height: 100%;
+    display: flex;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+
+.wristband {
+    margin: auto;
+    font-size: 1.3em;
+}
+
+/* on/no power style */
+.on-power {
+    background-color: #2DA43E;
+}
+
+.no-power {
+    background-color: #D7941E;
+}

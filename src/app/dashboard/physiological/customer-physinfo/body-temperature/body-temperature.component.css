@@ -1,0 +1,10 @@
+.body-temperature-info-area {
+    padding: 0px;
+    font-size: 1em;
+    border-bottom: 1px solid #193441;
+}
+
+.body-temperature-title-area,
+.body-temperature-count-area {
+    padding: 5px 0 0 5px;
+}

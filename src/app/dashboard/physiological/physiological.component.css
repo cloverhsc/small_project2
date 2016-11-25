@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+.row:before{
+    display: none;
+}
 /* customer info include avatar, name, age, environment temperature */
 .customer-info-area {
     position: relative;
@@ -52,4 +54,12 @@
 
 .temperature {
 
+}
+
+.physiological-component {
+    position: relative;
+    background-color: #3E606F;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
