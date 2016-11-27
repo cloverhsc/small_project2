@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { GetPhysiologicalInfoService }  from './get-physiological-info.service';
+import { GetPhysiologicalInfoService, myTest }  from './get-physiological-info.service';
 
 @Component({
   selector: 'app-physiological',
@@ -8,7 +8,7 @@ import { GetPhysiologicalInfoService }  from './get-physiological-info.service';
   styleUrls: ['./physiological.component.css']
 })
 export class PhysiologicalComponent implements OnInit {
-    private userlist: any ;
+    private userlist: myTest ;
     constructor(
         private getInfo: GetPhysiologicalInfoService
     ) { }
@@ -19,8 +19,8 @@ export class PhysiologicalComponent implements OnInit {
 
     getList() {
         this.getInfo.getUserList().subscribe(
-            (data) => this.userlist = data
+             (list) => console.log(list),
+             console.error
         );
-        console.log(this.userlist);
     }
 }

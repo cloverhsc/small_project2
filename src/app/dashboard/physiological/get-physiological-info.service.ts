@@ -12,7 +12,7 @@ import 'rxjs/add/operator/take';
 import 'rxjs/add/observable/throw';
 
 export class myTest {
-    list: number[];
+    'list': Array<any> ;
 }
 @Injectable()
 export class GetPhysiologicalInfoService {
@@ -21,7 +21,7 @@ export class GetPhysiologicalInfoService {
       private http: Http
     ) {  }
 
-    getUserList(): Observable<myTest> {
+    getUserList(): Observable<any> {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         return this.http.post(
@@ -30,12 +30,7 @@ export class GetPhysiologicalInfoService {
                 options
             )
             .map(
-                (res: Response) => {
-                    res.json();
-                    console.log('---------------------------');
-                    console.log(res);
-                    console.log(res.json());
-                }
+                (res: Response) => res.json().list
             ).catch(this.handleError);
     }
 
