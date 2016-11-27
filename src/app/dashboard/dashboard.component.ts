@@ -2,10 +2,14 @@ import {
     Component, OnInit, OnDestroy, HostListener
 } from '@angular/core';
 
+
+// get physiological service
+import { GetPhysiologicalInfoService }  from './physiological/get-physiological-info.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  providers: [ GetPhysiologicalInfoService ]
 })
 export class DashboardComponent implements OnInit, OnDestroy {
 
