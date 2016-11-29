@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Physiological }    from './physiological';
+import { Url }  from './url';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
@@ -11,27 +12,64 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/observable/throw';
 
-export class myTest {
-    'list': Array<any> ;
-}
 @Injectable()
 export class GetPhysiologicalInfoService {
-    private dataUrl = 'http://localhost:8000/api/userlist/';
+    private url = new Url();
     constructor(
       private http: Http
     ) {  }
 
     getUserList(): Observable<any> {
+        // post rest api
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         return this.http.post(
-                this.dataUrl,
+                this.url.userListUrl,
                 '',
                 options
             )
             .map(
-                (res: Response) => res.json().list
+                (res: Response) => res.json()
             ).catch(this.handleError);
+    }
+
+    getUserInfo(id: number): Observable<Physiological> {
+        if ( id ) {
+            // post rest api
+            let headers = new Headers({ 'Content-Type': 'application/json' });
+            let options = new RequestOptions({ headers: headers });
+            return this.http.post(
+                this.url.userDataUrl,
+                {'id': id},
+                options
+            )
+            .map(
+                (res: Response) => res.json()
+            )
+            .catch(this.handleError);
+        } else {
+            return null;
+        }
+    }
+
+    getUserPhyInfo(id: number): Observable<Physiological> {
+        if ( id ) {
+            // post rest api
+            let headers = new Headers({ 'Content-Type': 'application/json' });
+            let options = new RequestOptions({ headers: headers });
+            return Observable.interval(5000).concatMap(
+                () => this.http.post(
+                    this.url.userDataUrl,
+                    {'id': id},
+                    options
+                ).map(
+                    (res: Response) => res.json()
+                )
+            .catch(this.handleError)
+        );
+        } else {
+            return null;
+        }
     }
 
     private handleError (error: Response | any) {

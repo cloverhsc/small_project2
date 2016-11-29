@@ -22,6 +22,7 @@ import { BodyTemperatureComponent } from './dashboard/physiological/customer-phy
 import { BloodOxygenComponent } from './dashboard/physiological/customer-physinfo/blood-oxygen/blood-oxygen.component';
 import { GlycemiaComponent } from './dashboard/physiological/customer-physinfo/glycemia/glycemia.component';
 import { UricAcidComponent } from './dashboard/physiological/customer-physinfo/uric-acid/uric-acid.component';
+import { TransformSexPipe } from './dashboard/transform-sex.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { UricAcidComponent } from './dashboard/physiological/customer-physinfo/u
     BodyTemperatureComponent,
     BloodOxygenComponent,
     GlycemiaComponent,
-    UricAcidComponent
+    UricAcidComponent,
+    TransformSexPipe
   ],
   imports: [
     BrowserModule,

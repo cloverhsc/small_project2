@@ -1,8 +1,7 @@
 <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 physiological-section">
-    <app-physiological class="customer-physiological-card row"></app-physiological>
-    <!-- <app-physiological class="customer-physiological-card row"></app-physiological>
-    <app-physiological class="customer-physiological-card row"></app-physiological>
-    <app-physiological class="customer-physiological-card row"></app-physiological>
-    <app-physiological class="customer-physiological-card row"></app-physiological>
-    <app-physiological class="customer-physiological-card row"></app-physiological> -->
+
+    <app-physiological *ngFor="let id of userIDList"
+        class="customer-physiological-card row" [userID]='id' ></app-physiological>
+    <!-- <app-physiological  class="customer-physiological-card row" [userID]='1'></app-physiological> -->
+
 </section>

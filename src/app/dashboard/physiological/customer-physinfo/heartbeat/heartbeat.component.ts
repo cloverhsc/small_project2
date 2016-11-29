@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-heartbeat',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeartbeatComponent implements OnInit {
     private heartbeatTitle: string = '心跳';
-    private count: number = 200;
+    @Input() count: number;
   constructor() { }
 
   ngOnInit() {

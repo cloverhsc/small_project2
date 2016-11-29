@@ -2,6 +2,10 @@
 .row:before{
     display: none;
 }
+.card-location{
+    cursor: pointer;
+    padding: 0px 5px;
+}
 /* customer info include avatar, name, age, environment temperature */
 .customer-info-area {
     position: relative;
@@ -41,9 +45,51 @@
     color:#D1DBBD;
 }
 
-.name {
-
+.name-and-sex{
+    position: relative;
+    height: 50%;
 }
+.name {
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*.name:hover:before, .name:hover:after{
+    opacity: 1;
+}
+
+.name:before{
+    content: attr(name);
+    background: #d9444a;
+    color: #fff;
+    padding: .8em 1em;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    margin-left: 14px;
+    white-space: pre;
+}
+
+.name:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #d9444a transparent transparent;
+}
+
+.name:before, .name:after {
+    opacity: 0;
+     -moz-transition: opacity 0.3s ease-out;
+     -o-transition: opacity 0.3s ease-out;
+     -webkit-transition: opacity 0.3s ease-out;
+     transition: opacity 0.3s ease-out;
+}*/
+
 .sex {
     padding-left: 1em;
 }
@@ -62,4 +108,20 @@
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+}
+
+/* Pop up patient detail information */
+.customer-detaile {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #69a0d6;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+    display: none;
+}
+
+.display{
+    display: initial;
 }

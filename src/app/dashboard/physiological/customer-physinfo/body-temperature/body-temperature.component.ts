@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-body-temperature',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyTemperatureComponent implements OnInit {
     private bodyTemperatureTitle: string = '體溫';
-    private count: number = 36.5;
+    @Input() count: number;
   constructor() { }
 
   ngOnInit() {

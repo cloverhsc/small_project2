@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-breath',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BreathComponent implements OnInit {
     private breathTitle: string = '呼吸次數/m';
-    private count: number = 15
+    @Input() count: number;
   constructor() { }
 
   ngOnInit() {

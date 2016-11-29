@@ -4,7 +4,8 @@ import {
 
 
 // get physiological service
-import { GetPhysiologicalInfoService }  from './physiological/get-physiological-info.service';
+import { GetPhysiologicalInfoService }  from './slide/get-physiological-info.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

@@ -1,22 +1,33 @@
 <!-- customer avatar , name , age , environment temperature -->
-<aside class=" customer-info-area col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="customer-avatar-block col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <figure class="avatar">
-            <img src="assets/photo.png" alt="custome's avatar"/>
-        </figure>
-    </div>
+<div class="card-location col-xs-12 col-sm-12 col-md-12 col-lg-12" (click)="showUserDetail(true)">
+    <aside class=" customer-info-area col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="customer-avatar-block col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <figure class="avatar">
+                <img src="assets/photo.png" alt="custome's avatar"/>
+            </figure>
+        </div>
 
-    <div class="customer-name-age-block col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <P class="name"><span>許O傑</span><span class="sex">男</span></P>
-        <P class="age">年齡：<span>35</span></P>
-    </div>
+        <div class="customer-name-age-block col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <p class="name-and-sex">
+                <span class="name col-xs-8 col-sm-8 col-md-8 col-lg-8" [attr.name]="userData?.name">
+                    {{userData?.name}}
+                </span>
+                <span class="sex col-xs-2 col-sm-2 col-md-2 col-lg-2">{{userData?.sex|transformSex}}</span>
+            </p>
 
-    <div class="environment-temperature-block col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <p class="temperature">室溫</p>
-        <p>20</p>
-    </div>
-</aside>
-<app-indoor-behavior class="physiological-component row"></app-indoor-behavior>
-<app-devices-info class="physiological-component row"></app-devices-info>
-<app-customer-behavior class="physiological-component row"></app-customer-behavior>
-<app-customer-physinfo class="physiological-component row"></app-customer-physinfo>
+            <p class="age">年齡：<span>{{userData?.age}}</span></p>
+        </div>
+
+        <div class="environment-temperature-block col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <p class="temperature">室溫</p>
+            <p>20</p>
+        </div>
+    </aside>
+    <app-indoor-behavior class="physiological-component row"></app-indoor-behavior>
+    <app-devices-info class="physiological-component row"></app-devices-info>
+    <app-customer-behavior class="physiological-component row"></app-customer-behavior>
+    <app-customer-physinfo class="physiological-component row" [userID]='userID'></app-customer-physinfo>
+</div>
+<div class="customer-detaile" [class.display]="isClassVisible" (click)="showUserDetail(false)">
+<h2>{{userData?.name}}</h2>
+</div>
