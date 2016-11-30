@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Physiological }    from './physiological';
+import { Physiological, PatientInfo }    from './physiological';
 import { Url }  from './url';
 
 import { Observable } from 'rxjs/Observable';
@@ -33,7 +33,7 @@ export class GetPhysiologicalInfoService {
             ).catch(this.handleError);
     }
 
-    getUserInfo(id: number): Observable<Physiological> {
+    getUserInfo(id: number): Observable<PatientInfo> {
         if ( id ) {
             // post rest api
             let headers = new Headers({ 'Content-Type': 'application/json' });
@@ -59,7 +59,7 @@ export class GetPhysiologicalInfoService {
             let options = new RequestOptions({ headers: headers });
             return Observable.interval(5000).concatMap(
                 () => this.http.post(
-                    this.url.userDataUrl,
+                    this.url.phyDataUrl,
                     {'id': id},
                     options
                 ).map(

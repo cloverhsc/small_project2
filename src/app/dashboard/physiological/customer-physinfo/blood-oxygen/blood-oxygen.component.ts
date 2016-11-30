@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-blood-oxygen',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BloodOxygenComponent implements OnInit {
     private bloodOxygenTitle: string = '血氧值';
-    private count: number = 90;
+    @Input() count: number ;
   constructor() { }
 
   ngOnInit() {

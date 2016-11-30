@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-glycemia',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GlycemiaComponent implements OnInit {
     private glycemiaTitle: string = '血糖值 mg/dl';
-    private count: number = 126;
+    @Input() count: number;
   constructor() { }
 
   ngOnInit() {

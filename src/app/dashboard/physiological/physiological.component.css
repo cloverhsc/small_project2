@@ -17,7 +17,7 @@
     border-bottom: 1px solid #FCFFF5;
 }
 
-.customer-avatar-block {
+.customer-avatar-block, .customer-detail-avatar-block {
     position: relative;
     padding-left: 0px;
     padding-right: 0px;
@@ -111,17 +111,77 @@
 }
 
 /* Pop up patient detail information */
-.customer-detaile {
+.customer-detaile-page {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: #69a0d6;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(55, 70, 103, 0.83);*/
+    background-color: #D1DBBD;
     top: 0%;
     left: 0%;
     z-index: 10;
     display: none;
+    cursor: pointer;
+
 }
 
 .display{
-    display: initial;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.customer-detail-info-block,
+.customer-detail-table-block{
+    width: 45%;
+    height: 95%;
+    background-color: #3E606F;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.customer-detail-body-info-block,
+.customer-detail-address-block,
+.customer-detail-contact-block,
+.customer-detail-room-block,
+.customer-detail-device-block,
+.customer-detail-indoor-block,
+.customer-detail-walk-block,
+.customer-detail-phy-block{
+    color: #D1DBBD;
+    font-size: 1.2em;
+    padding:0px 5px;
+}
+.customer-detail-name,
+.customer-detail-body,
+.customer-detail-address,
+.customer-detail-contact,
+.customer-detail-room,
+.customer-detail-device,
+.customer-detail-indoor,
+.customer-detail-walk,
+.customer-detail-heartbeat,
+.customer-detail-breath,
+.customer-detail-blood-presure,
+.customer-detail-blood-oxygen,
+.customer-detail-glycemia,
+.customer-detail-body-temperature,
+.customer-detail-uric-acid{
+    height: 30px;
+    border-bottom: 1px solid #FCFFF5;
+    padding:0px 5px;
+}
+
+/* all physiological information data */
+.customer-detail-phy-block {
+    width: 100%;
+    padding: 0px 5px;
+    margin: 0px;
+}
+
+textarea{
+    position: relative;
+    width: 100%;
+    height: 100%;
 }

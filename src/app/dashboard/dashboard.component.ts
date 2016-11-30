@@ -1,5 +1,5 @@
 import {
-    Component, OnInit, OnDestroy, HostListener
+    Component, OnInit, OnDestroy
 } from '@angular/core';
 
 

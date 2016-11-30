@@ -1,9 +1,18 @@
 <div class="customer-physinfo-area col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <app-heartbeat [count]='userData?.heartbeat' class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-heartbeat>
-    <app-breath [count]='userData?.breath' class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-breath>
-    <app-body-temperature [count]='userData?.bodytemperature' class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-body-temperature>
-    <app-sleep-status class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-sleep-status>
-    <app-blood-oxygen class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-blood-oxygen>
-    <app-glycemia class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-glycemia>
-    <app-uric-acid class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-uric-acid>
+    <app-heartbeat [count]='userData?.heartbeat'
+        class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-heartbeat>
+    <app-breath [count]='userData?.breath'
+        class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-breath>
+    <app-body-temperature [count]='userData?.body_temperature'
+        class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-body-temperature>
+    <app-sleep-status
+        class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-sleep-status>
+    <app-blood-oxygen [count]='userData?.blood_oxygen'
+        class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-blood-oxygen>
+    <app-glycemia [count]='userData?.glycemia'
+        class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-glycemia>
+    <app-uric-acid [count]='userData?.uric_acid'
+        class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-uric-acid>
+    <app-blood-pressure [count]='userData?.blood_pressure'
+        class="physinfo row col-xs-6 col-sm-6 col-md-6 col-lg-6"></app-blood-pressure>
 </div>

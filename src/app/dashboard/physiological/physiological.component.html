@@ -28,6 +28,162 @@
     <app-customer-behavior class="physiological-component row"></app-customer-behavior>
     <app-customer-physinfo class="physiological-component row" [userID]='userID'></app-customer-physinfo>
 </div>
-<div class="customer-detaile" [class.display]="isClassVisible" (click)="showUserDetail(false)">
-<h2>{{userData?.name}}</h2>
+<div class="customer-detaile-page" [class.display]="isClassVisible" (click)="showUserDetail(false)">
+    <section class="customer-detail-info-block">
+        <div class="customer-detail-avatar-block col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <figure class="avatar">
+                <img src="assets/photo.png" alt="custome's avatar"/>
+            </figure>
+        </div>
+
+        <div class="customer-detail-body-info-block col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <p class="customer-detail-name col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-8 col-sm-8 col-md-8 col-lg-8" [attr.name]="userData?.name">
+                    姓名：{{userData?.name}}
+                </span>
+                <span class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    性別：{{userData?.sex|transformSex}}
+                </span>
+            </p>
+            <p class="customer-detail-body col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    年齡：{{userData?.age}}
+                </span>
+                <span class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    身高：{{userData?.height}} CM
+                </span>
+                <span class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    體重：{{userData?.weight}} KG
+                </span>
+            </p>
+        </div>
+
+        <div class="customer-detail-address-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="customer-detail-address col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    聯絡地址：{{userData?.address}}
+                </span>
+            </p>
+        </div>
+
+        <div class="customer-detail-contact-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="customer-detail-contact col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    聯絡電話：{{userData?.contact}}
+                </span>
+            </p>
+        </div>
+
+        <div class="customer-detail-room-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="customer-detail-room col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    病房：{{userData?.room}}
+                </span>
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    床號：{{userData?.number}}
+                </span>
+            </p>
+        </div>
+
+        <div class="customer-detail-contact-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="customer-detail-contact col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    主治醫師：{{userData?.attend_doctor}}
+                </span>
+            </p>
+        </div>
+
+        <div class="customer-detail-device-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="customer-detail-device col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <!-- 手環是否有電：{{phyData.wristband_power|transformBoolean}} -->
+                    手環是否有電：{{phyData?.wristband_power}}
+                </span>
+                <!-- <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    床墊是否運作：{{phyData.mattress_power|transformBoolean}}
+                </span> -->
+            </p>
+        </div>
+
+        <div class="customer-detail-indoor-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="customer-detail-indoor col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    是否離房：{{phyData?.leave|transformBoolean}}
+                </span>
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    今日離房次數：{{phyData?.count_leave}}
+                </span>
+            </p>
+
+            <p class="customer-detail-indoor col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    是否呼叫：{{phyData?.call|transformBoolean}}
+                </span>
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    今日呼叫次數：{{phyData?.count_call}}
+                </span>
+            </p>
+        </div>
+
+        <div class="customer-detail-walk-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="customer-detail-walk col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    今日步數：{{phyData?.walk_steps}}
+                </span>
+            </p>
+        </div>
+
+        <div class="customer-detail-phy-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="customer-detail-heartbeat col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    心跳：{{ phyData?.heartbeat }}
+                </span>
+            </p>
+
+            <p class="customer-detail-breath col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    呼吸：{{ phyData?.breath }}
+                </span>
+            </p>
+
+            <p class="customer-detail-blood-presure col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    血壓：{{ phyData?.blood_pressure }}
+                </span>
+            </p>
+
+            <p class="customer-detail-blood-oxygen col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    血氧：{{ phyData?.blood_oxygen }}
+                </span>
+            </p>
+
+            <p class="customer-detail-glycemia col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    血糖：{{ phyData?.glycemia }}
+                </span>
+            </p>
+
+            <p class="customer-detail-body-temperature col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    目前體溫：{{ phyData?.body_temperature }}
+                </span>
+            </p>
+
+            <p class="customer-detail-uric-acid col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    尿酸：{{ phyData?.uric_acid }}
+                </span>
+            </p>
+
+        </div>
+
+    </section>
+    <section class="customer-detail-table-block">
+        <textarea>
+            有心悸、頭暈、胃口不好等症狀。
+            用藥時需xxxxxxxxxxxxxxx
+            xxxxxxxxxxxxxx 然後
+        </textarea>
+    </section>
 </div>

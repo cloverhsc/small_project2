@@ -1,4 +1,4 @@
-export class Physiological {
+export class PatientInfo {
     /* result and message */
     result: string;
     message: string;
@@ -14,7 +14,9 @@ export class Physiological {
     address: string;     // 地址
     height: string;     // 身高
     room: string;       // 病房名稱
+}
 
+export class Physiological {
     /* customer-behavior */
     walk_steps: number;     // 運動步數
 
@@ -26,6 +28,7 @@ export class Physiological {
      breath: number;
      glycemia: string;
      heartbeat: number;
+     attend_doctor: string;
 
      /* device information on-power or no-power*/
      wristband_power: boolean;

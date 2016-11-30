@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-uric-acid',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UricAcidComponent implements OnInit {
     private uricAcidTitle: string = '尿酸值 mg/dL';
-    private count: number = 6.5;
+    @Input() count: number;
   constructor() { }
 
   ngOnInit() {

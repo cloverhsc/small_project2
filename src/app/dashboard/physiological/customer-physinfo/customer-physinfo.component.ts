@@ -11,7 +11,7 @@ import {GetPhysiologicalInfoService} from '../../slide/get-physiological-info.se
 })
 export class CustomerPhysinfoComponent implements OnInit, OnDestroy {
     @Input() userID: number;
-    private userData: Physiological;
+    public userData: Physiological;
     private errorMsg: string;
 
     constructor(
