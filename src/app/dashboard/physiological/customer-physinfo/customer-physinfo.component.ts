@@ -10,7 +10,7 @@ import {GetPhysiologicalInfoService} from '../../slide/get-physiological-info.se
   styleUrls: ['./customer-physinfo.component.css']
 })
 export class CustomerPhysinfoComponent implements OnInit, OnDestroy {
-    @Input() userID: number;
+    @Input() user_ID: number;
     public userData: Physiological;
     private errorMsg: string;
 
@@ -19,13 +19,13 @@ export class CustomerPhysinfoComponent implements OnInit, OnDestroy {
     ) { }
 
     ngOnInit() {
-        this.getPhyInfo(this.userID);
+        this.getPhyInfo(this.user_ID);
     }
 
     ngOnDestroy() { }
 
-    getPhyInfo( userID ) {
-        this.getInfo.getUserPhyInfo(userID).subscribe(
+    getPhyInfo( user_ID ) {
+        this.getInfo.getUserPhyInfo(user_ID).subscribe(
             (data) => this.userData = data,
             (error) => this.errorMsg = error
         )

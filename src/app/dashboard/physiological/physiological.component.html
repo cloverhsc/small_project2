@@ -26,7 +26,7 @@
     <app-indoor-behavior class="physiological-component row"></app-indoor-behavior>
     <app-devices-info class="physiological-component row"></app-devices-info>
     <app-customer-behavior class="physiological-component row"></app-customer-behavior>
-    <app-customer-physinfo class="physiological-component row" [userID]='userID'></app-customer-physinfo>
+    <app-customer-physinfo class="physiological-component row" [user_ID]='userID'></app-customer-physinfo>
 </div>
 <div class="customer-detaile-page" [class.display]="isClassVisible" (click)="showUserDetail(false)">
     <section class="customer-detail-info-block">
@@ -96,12 +96,11 @@
         <div class="customer-detail-device-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <p class="customer-detail-device col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <!-- 手環是否有電：{{phyData.wristband_power|transformBoolean}} -->
-                    手環是否有電：{{phyData?.wristband_power}}
+                    手環是否有電：{{phyData?.wristband_power|transformBoolean}}
                 </span>
-                <!-- <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    床墊是否運作：{{phyData.mattress_power|transformBoolean}}
-                </span> -->
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    床墊是否運作：{{phyData?.mattress_power|transformBoolean}}
+                </span>
             </p>
         </div>
 

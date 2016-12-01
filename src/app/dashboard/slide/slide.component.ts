@@ -21,7 +21,9 @@ export class SlideComponent implements OnInit {
 
     getList() {
         this.getInfo.getUserList().subscribe(
-             (list) => this.userIDList = list.list,
+             (list) => {
+                 this.userIDList = list.list;
+             },
              (error) => this.errorMsg = error,
              () => {
                  /*

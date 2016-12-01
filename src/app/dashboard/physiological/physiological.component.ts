@@ -11,8 +11,7 @@ import { CustomerPhysinfoComponent }    from './customer-physinfo/customer-physi
 })
 export class PhysiologicalComponent implements OnInit, OnDestroy {
     @Input() userID: number;
-    @ViewChild( CustomerPhysinfoComponent)
-    private phyComponent: CustomerPhysinfoComponent;
+    @ViewChild( CustomerPhysinfoComponent) phyComponent: CustomerPhysinfoComponent;
     private userData: PatientInfo;
     private errorMsg: string;
     public isClassVisible: boolean = false;
@@ -23,13 +22,19 @@ export class PhysiologicalComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.getUserData(this.userID);
-        // console.log(this.userID);
     }
 
     ngAfterViewInit() {
-            this.phyData =  this.phyComponent.userData;
-            console.log(this.phyData);
+        setTimeout(() => this.phyData = this.phyComponent.userData, 0);
     }
+
+    ngAfterViewChecked() {
+        if ( this.phyData !== this.phyComponent.userData) {
+            this.phyData = this.phyComponent.userData;
+            console.log(this.phyData);
+        }
+    }
+
     ngOnDestroy() {
     }
 

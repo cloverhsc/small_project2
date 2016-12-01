@@ -21,7 +21,7 @@ export class GetPhysiologicalInfoService {
 
     getUserList(): Observable<any> {
         // post rest api
-        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         return this.http.post(
                 this.url.userListUrl,
@@ -36,7 +36,10 @@ export class GetPhysiologicalInfoService {
     getUserInfo(id: number): Observable<PatientInfo> {
         if ( id ) {
             // post rest api
-            let headers = new Headers({ 'Content-Type': 'application/json' });
+            let headers = new Headers({
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            });
             let options = new RequestOptions({ headers: headers });
             return this.http.post(
                 this.url.userDataUrl,
@@ -55,7 +58,10 @@ export class GetPhysiologicalInfoService {
     getUserPhyInfo(id: number): Observable<Physiological> {
         if ( id ) {
             // post rest api
-            let headers = new Headers({ 'Content-Type': 'application/json' });
+            let headers = new Headers({
+                 'Content-Type': 'application/json',
+                 'Accept': 'application/json'
+            });
             let options = new RequestOptions({ headers: headers });
             return Observable.interval(5000).concatMap(
                 () => this.http.post(
