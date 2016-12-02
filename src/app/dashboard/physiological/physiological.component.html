@@ -23,10 +23,11 @@
             <p>20</p>
         </div>
     </aside>
-    <app-indoor-behavior class="physiological-component row"></app-indoor-behavior>
-    <app-devices-info class="physiological-component row"></app-devices-info>
-    <app-customer-behavior class="physiological-component row"></app-customer-behavior>
-    <app-customer-physinfo class="physiological-component row" [user_ID]='userID'></app-customer-physinfo>
+    <app-indoor-behavior [myPhyData]='phyData' class="physiological-component row"></app-indoor-behavior>
+    <app-devices-info [myPhyData]='phyData' class="physiological-component row"></app-devices-info>
+    <app-customer-behavior [myPhyData]='phyData' class="physiological-component row"></app-customer-behavior>
+    <app-customer-physinfo [myPhyData]='phyData' class="physiological-component row" ></app-customer-physinfo>
+
 </div>
 <div class="customer-detaile-page" [class.display]="isClassVisible" (click)="showUserDetail(false)">
     <section class="customer-detail-info-block">

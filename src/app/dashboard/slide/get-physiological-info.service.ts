@@ -63,7 +63,7 @@ export class GetPhysiologicalInfoService {
                  'Accept': 'application/json'
             });
             let options = new RequestOptions({ headers: headers });
-            return Observable.interval(5000).concatMap(
+            return Observable.interval(3000).concatMap(
                 () => this.http.post(
                     this.url.phyDataUrl,
                     {'id': id},
