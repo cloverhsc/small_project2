@@ -5,6 +5,7 @@
 .card-location{
     cursor: pointer;
     padding: 0px 5px;
+    height: 100%;
 }
 /* customer info include avatar, name, age, environment temperature */
 .customer-info-area {
@@ -132,8 +133,7 @@
     align-items: center;
 }
 
-.customer-detail-info-block,
-.customer-detail-table-block{
+.customer-detail-info-block{
     width: 45%;
     height: 95%;
     background-color: #3E606F;
@@ -178,8 +178,14 @@
     width: 100%;
     padding: 0px 5px;
     margin: 0px;
+    overflow: auto;
 }
 
+.customer-detail-table-block{
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
 textarea{
     position: relative;
     width: 100%;
