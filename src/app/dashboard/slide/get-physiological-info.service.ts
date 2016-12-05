@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Physiological, PatientInfo }    from './physiological';
-import { Url }  from './url';
+
+import {Url} from '../url';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
